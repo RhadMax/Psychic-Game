@@ -1,0 +1,27 @@
+Objectives:
+
+Display Game Title on screen and prompt user to guess which letter the page(witch :P) is thinking of
+
+Display Counter for # of wins 
+
+Display Counter for # of losses
+
+Display number of guesses left for the current round
+
+Display history of guessed letters for the current round
+
+-Bonus : Add a background image themed for fortune telling
+-Bonus : Incorporate image from Shining Force game with the witch and speech bubbles (nostalgia ftw)
+
+
+Operational:
+
+At start of a round, guess counter is set back to 9 and a new random letter is chosen.
+
+When the correct key is pressed, start new round and add 1 to wins counter.
+
+When a key is pressed that is not the correct letter, display that key on screen under guessed letters.
+
+when a key is pressed that is not the correct letter, reduce guesses left counter by one.
+
+If guesses left counter reaches 0, start new round and add 1 to losses counter.
