@@ -20,12 +20,13 @@ document.onkeyup = function (event) {
     taunt = taunts[Math.floor(Math.random() * taunts.length)];
     var userGuess = event.key;
     if (guessesLeft === 9) {
+        window.computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
         guessesLeft--;
     }
-    if (guessesLeft > 0 && guessesLeft < 9 && userGuess === computerGuess) {
+    if (guessesLeft > 0 && guessesLeft < 9 && userGuess === window.computerGuess) {
         wins++;
         guessesLeft = 9;
-        // 
+        // console.log("Computer chose letter: " + computerGuess);
         // console.log("Player chose letter: " + userGuess);
         // console.log("You Won! Let's play again.");
         // alert("You Won! Let's play again.");
