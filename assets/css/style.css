@@ -1,15 +1,76 @@
 body {
     text-align: center;
+    
     background-color: black;
-    color: white;
+
+    
+}
+p {
+    font-family: 'Ranga', cursive;
+    font-size: 26px;
+    line-height: 75%;
+}
+#header {
+    position: relative;
+    left: auto;
+    right: auto;
+    top:650px;
+    height:200px;
+}
+#vid {
+    position: relative;
+    top: 75%;
+    right: 0px;
+}
+#music {
+    position: relative;
+    top: 370px;
+    left: 85px;
+    opacity: 0;
+}
+#music:hover {
+    opacity: 0.7;
+}
+.underlined {
+    text-decoration: underline;
+}
+#bubb1 {
+    position: relative;
+    right: 290px;
+    bottom: 115px;
+}
+#bubb2 {
+    position: relative;
+    right: -255px;
+    bottom: 205px;
+}
+#bubb3 {
+    position: relative;
+    right: 350px;
+    bottom: 130px;
+}
+#bubb4 {
+    position: relative;
+    right: -320px;
+    bottom: 230px;
+}
+#bg {
+    width: 1000px;
+    height: 1000px;
+    background-image:url("../images/witchbg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 h1 {
-    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
     font-weight: bolder;
-    color: magenta;
+    color: rgb(139, 50, 139);
 }
 
 h2 {
-    font-size: 25px;
+    font-family: 'Ranga', cursive;
+    color: rgb(75, 75, 75);
+    font-size: 32px;
     font-weight: bold;
 }
