@@ -24,7 +24,7 @@ p {
 }
 #music {
     position: relative;
-    top: 370px;
+    top: 340px;
     left: 85px;
     opacity: 0;
 }
@@ -68,7 +68,7 @@ h1 {
     color: rgb(139, 50, 139);
 }
 
-h2 {
+h2, h3 {
     font-family: 'Ranga', cursive;
     color: rgb(75, 75, 75);
     font-size: 32px;

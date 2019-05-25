@@ -14,7 +14,12 @@ var taunts = ["Haha, not that one!", "Nope! Keep guessing!", "Ha! Some hero you 
 //     console.log(music);
 //     music.unMute();
 // }
-taunt = taunts[Math.floor(Math.random() * taunts.length)];
+var winAudio = new Audio("assets/images/victory.mp3");
+winAudio.volume = .3;
+var lossAudio = new Audio("assets/images/defeat.mp3");
+lossAudio.volume = .2;
+var soundsToggle = document.getElementById("soundStatus");
+soundsToggle.textContent = "-On-";
 
 document.onkeyup = function (event) {
     taunt = taunts[Math.floor(Math.random() * taunts.length)];
@@ -31,6 +36,9 @@ document.onkeyup = function (event) {
         // console.log("You Won! Let's play again.");
         // alert("You Won! Let's play again.");
         alerter.textContent = "Dang! You guessed it!";
+
+     
+        winAudio.play();
     } else if (guessesLeft === 8 && userGuess !== window.computerGuess) {
         guessesLeft--;
         // console.log("Computer chose letter: " + computerGuess);
@@ -49,6 +57,8 @@ document.onkeyup = function (event) {
         // console.log("You ran out of guesses. You lose!");
         guessesLeft = 9;
         alerter.textContent = "Tee hee hee! I win!";
+        
+        lossAudio.play();
         // alert("You Lost! Let's play again.")
     }
     winsCounter.textContent = " " + wins + " ";
@@ -63,4 +73,20 @@ document.onkeyup = function (event) {
     } else {
         guessCounter.textContent = " " + (guessesLeft + 1) + " ";
     }
+
+
 }
+
+$("h3").click(function () {
+    if (soundsToggle.textContent == "-On-") {
+        winAudio.volume = 0;
+        lossAudio.volume = 0;
+        console.log("sound muted");
+        soundsToggle.textContent = "-Off-"
+    } else {
+        winAudio.volume = .3;
+        lossAudio.volume = .2;
+        console.log("sound unmuted");
+        soundsToggle.textContent = "-On-"
+    }
+});
